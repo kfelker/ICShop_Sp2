@@ -2,39 +2,39 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Weirun\Desktop\icshopp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="C:\Users\Weirun\Desktop\icshopp\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-8e65450f6ab1f73efe0a20ad0105b798336852a1.jar" />
-    </item>
-    <item
-        jar="C:\Users\Weirun\Desktop\icshopp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jar="C:\Users\thewagdy\AndroidStudioProjects\ICShop_Sp2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
-        <dex dex="C:\Users\Weirun\Desktop\icshopp\app\build\intermediates\pre-dexed\debug\classes-a6427c44082a0a03f991e5f72045382d47a7e94e.jar" />
+        <dex dex="C:\Users\thewagdy\AndroidStudioProjects\ICShop_Sp2\app\build\intermediates\pre-dexed\debug\classes-eb2626b7c5adaaa34b8544fe0169ba1fb38297db.jar" />
     </item>
     <item
-        jar="C:\Users\Weirun\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="C:\Users\Weirun\Desktop\icshopp\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.0-70c7f2856a8caffe976c5c39bceb24768ac9f85f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Weirun\Desktop\icshopp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
-        <dex dex="C:\Users\Weirun\Desktop\icshopp\app\build\intermediates\pre-dexed\debug\classes-14f96e2ba0402c2f6565400829bdc7dc528b92d4.jar" />
-    </item>
-    <item
-        jar="C:\Users\Weirun\.gradle\caches\modules-2\files-2.1\com.readystatesoftware.sqliteasset\sqliteassethelper\2.0.1\d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f\sqliteassethelper-2.0.1.jar"
+        jar="C:\Users\thewagdy\.gradle\caches\modules-2\files-2.1\com.readystatesoftware.sqliteasset\sqliteassethelper\2.0.1\d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f\sqliteassethelper-2.0.1.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f">
-        <dex dex="C:\Users\Weirun\Desktop\icshopp\app\build\intermediates\pre-dexed\debug\sqliteassethelper-2.0.1-2b9dab696300f93c084e28f1ed9c79d3ca6d1b5e.jar" />
+        <dex dex="C:\Users\thewagdy\AndroidStudioProjects\ICShop_Sp2\app\build\intermediates\pre-dexed\debug\sqliteassethelper-2.0.1-7bf39cec7120c0844f7b66368ace21d6942f7fc8.jar" />
+    </item>
+    <item
+        jar="C:\Users\thewagdy\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="C:\Users\thewagdy\AndroidStudioProjects\ICShop_Sp2\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.0-e227a30703c8b394461b72288e0fa15d6853d995.jar" />
+    </item>
+    <item
+        jar="C:\Users\thewagdy\AndroidStudioProjects\ICShop_Sp2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="C:\Users\thewagdy\AndroidStudioProjects\ICShop_Sp2\app\build\intermediates\pre-dexed\debug\classes-6a661643cd0bc5301d217ddd4afa58ffaf5c8e9a.jar" />
+    </item>
+    <item
+        jar="C:\Users\thewagdy\AndroidStudioProjects\ICShop_Sp2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="C:\Users\thewagdy\AndroidStudioProjects\ICShop_Sp2\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-804efbf18b80c1115075c14682314bec479f373e.jar" />
     </item>
 
 </items>

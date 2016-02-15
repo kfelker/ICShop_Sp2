@@ -26,9 +26,9 @@
 
         tools:listitem="@android:layout/simple_list_item_1"
         android:clickable="true"
-        android:background="#ff1a1a"
+        android:background="#ffffff"
         android:drawSelectorOnTop="false"
-        android:divider="#FFFFFF"
+        android:divider="#000000"
         android:dividerHeight="5dp"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
