@@ -227,9 +227,9 @@ public class MyDatabase extends SQLiteAssetHelper {
         SQLiteDatabase db = getReadableDatabase();
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
-        String sqlState = "SELECT Brand.ID, Brand.Name"
-                + " FROM Business INNER JOIN (Brand INNER JOIN [Business-Brand] ON Brand.ID = [Business-Brand].BrandID) ON Business.ID = [Business-Brand].BusinessID"
-                + " WHERE (((Business.ID)=?))";
+        String sqlState = "SELECT Brand.ID, Brand.Name "
+                + " FROM Business INNER JOIN (Brand INNER JOIN [Business-Brand] ON Brand.ID = [Business-Brand].BrandID) ON Business.ID = [Business-Brand].BusinessID "
+                + " WHERE (((Business.ID)=?)) ";
 
         Cursor c = db.rawQuery(sqlState, new String[]{storeID});
         c.moveToFirst();

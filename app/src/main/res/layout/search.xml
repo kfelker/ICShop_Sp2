@@ -78,15 +78,16 @@
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="3dp"
         android:id="@android:id/list"
+        android:layout_below="@+id/radiogroup_search"
+        android:layout_alignLeft="@+id/radiogroup_search"
+        android:layout_alignStart="@+id/radiogroup_search"
         tools:listitem="@android:layout/simple_list_item_1"
         android:clickable="true"
         android:background="#ff1a1a"
         android:drawSelectorOnTop="false"
         android:divider="#FFFFFF"
-        android:dividerHeight="5dp"
-        android:layout_below="@+id/radiogroup_search"
-        android:layout_alignLeft="@+id/radiogroup_search"
-        android:layout_marginTop="25dp" />
+        android:dividerHeight="5dp"/>
 
 </RelativeLayout>

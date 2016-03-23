@@ -20,6 +20,5 @@
     <string name="search_Activity">Search Activity</string>
     <string name="title_activity_store_list">StoreList</string>
     <string name="title_activity_search">Search</string>
-    <string name="title_activity_sample">Sample Activity</string>
     <string name="title_activity_maps">Map</string>
 </resources>
