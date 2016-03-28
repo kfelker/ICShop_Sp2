@@ -11,6 +11,8 @@ import android.widget.ImageButton;
 public class MainActivity extends AppCompatActivity {
 
 
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         configureImageButton2();
         configureImageButton3();
     }
-
     /*all store button, imageButton1*/
     private void configureImageButton() {
         ImageButton btn = (ImageButton) findViewById(R.id.imageButton1);

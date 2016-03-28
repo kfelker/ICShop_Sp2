@@ -15,7 +15,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="slidingmenu_library" />
-    <orderEntry type="library" name="slidingmenu_library" level="project" />
   </component>
 </module>
