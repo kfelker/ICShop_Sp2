@@ -24,17 +24,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1073c14c-6d65-49ab-ad86-9e0159e24eeb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_support_v4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/bin.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/slidingmenu_library.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/ICShop_Sp2.iml" afterPath="$PROJECT_DIR$/.idea/modules/ICShop_Sp2.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/harry_000/icshop/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/harry_000/icshop/MainActivity.java" />
     </list>
     <ignored path="icshopp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -2598,7 +2588,7 @@
       <workItem from="1459025308330" duration="1797000" />
       <workItem from="1459114781662" duration="1215000" />
       <workItem from="1459127547928" duration="71000" />
-      <workItem from="1459127639088" duration="1286000" />
+      <workItem from="1459127639088" duration="1308000" />
     </task>
     <task id="LOCAL-00001" summary="fixed main page bug">
       <created>1458713554091</created>
@@ -2614,11 +2604,18 @@
       <option name="project" value="LOCAL" />
       <updated>1458763378479</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="remove action bar">
+      <created>1459128943371</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1459128943371</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16944000" />
+    <option name="totallyTimeSpent" value="16966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -2707,7 +2704,8 @@
     </ignored-roots>
     <MESSAGE value="fixed main page bug" />
     <MESSAGE value="add sliding menu library" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sliding menu library" />
+    <MESSAGE value="remove action bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove action bar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
