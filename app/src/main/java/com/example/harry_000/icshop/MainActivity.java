@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.app.Activity;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -28,14 +29,14 @@ public class MainActivity extends AppCompatActivity {
         menu.setFadeDegree(0.35f);
         configureImageButton();
         configureImageButton1();
-        configureImageButton2();
+//        configureImageButton2();
         configureImageButton3();
         menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
         menu.setMenu(R.layout.layout_left_menu);
     }
     /*all store button, imageButton1*/
     private void configureImageButton() {
-        ImageButton btn = (ImageButton) findViewById(R.id.imageButton1);
+        Button btn = (Button) findViewById(R.id.MainButton3);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
     /*all brand button, imageButton2*/
     private void configureImageButton1() {
-        ImageButton btn = (ImageButton) findViewById(R.id.imageButton2);
+        Button btn = (Button) findViewById(R.id.MainButton2);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,20 +59,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*favorite button, imageButton3*/
-    private void configureImageButton2() {
-        ImageButton btn = (ImageButton) findViewById(R.id.imageButton3);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, searchActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
+//    private void configureImageButton2() {
+//        ImageButton btn = (ImageButton) findViewById(R.id.imageButton3);
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, searchActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//    }
 
     /*Category button, imageButton4*/
     private void configureImageButton3() {
-        ImageButton btn = (ImageButton) findViewById(R.id.imageButton4);
+        Button btn = (Button) findViewById(R.id.MainButton1);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

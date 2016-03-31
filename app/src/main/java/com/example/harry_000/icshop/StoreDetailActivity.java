@@ -1,10 +1,14 @@
 package com.example.harry_000.icshop;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
@@ -32,8 +36,20 @@ public class StoreDetailActivity extends AppCompatActivity{
         TextView store = (TextView) this.findViewById(R.id.textViewStore);
         store.setText(myStore.getName());
 
-        TextView address = (TextView) this.findViewById(R.id.textViewAddress);
-        address.setText(myStore.getAddress());
+        final TextView address = (TextView) this.findViewById(R.id.textViewAddress);
+        SpannableString spanStr = new SpannableString(myStore.getAddress());
+        spanStr.setSpan(new UnderlineSpan(), 0, spanStr.length(), 0);
+        address.setText(spanStr);
+        final Intent geoIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q="+ address.getText().toString()));
+
+
+        address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(geoIntent);
+            }
+        });
 
         TextView hours = (TextView) this.findViewById(R.id.textViewHours);
         hours.setText(myStore.getHours());
