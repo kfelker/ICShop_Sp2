@@ -211,7 +211,7 @@
                         android:id="@+id/textViewBrands"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:textSize="13sp"
+                        android:textSize="10pt"
                         android:gravity="left"
                         android:padding="10dp"
                         android:textIsSelectable="false" />
@@ -230,7 +230,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
 
-                        android:textSize="13sp"
+                        android:textSize="10pt"
                         android:gravity="left"
                         android:padding="10dp"/>
 

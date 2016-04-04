@@ -237,7 +237,7 @@ public class MyDatabase extends SQLiteAssetHelper {
             for(int i=0;i<c.getCount();i++){
                 strBrandList+=c.getString(1);
                 if(i<(c.getCount()-1)){
-                    strBrandList+=",";
+                    strBrandList+="\n\n";
                 }
                 c.moveToNext();
             }
@@ -266,7 +266,7 @@ public class MyDatabase extends SQLiteAssetHelper {
             for(int i=0;i<c.getCount();i++){
                 strCategoryList+=c.getString(1);
                 if(i<(c.getCount()-1)){
-                    strCategoryList+=",";
+                    strCategoryList+="\n\n";
                 }
                 c.moveToNext();
             }
