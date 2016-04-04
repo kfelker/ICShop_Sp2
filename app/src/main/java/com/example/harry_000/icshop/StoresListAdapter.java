@@ -39,10 +39,10 @@ public class StoresListAdapter  extends ArrayAdapter {
         }
 
         TextView NameView = (TextView) view.findViewById(R.id.Name);
-        TextView phoneNumberView = (TextView) view.findViewById(R.id.Phone);
+//        TextView phoneNumberView = (TextView) view.findViewById(R.id.Phone);
 
         NameView.setText( mStores.get(position).getName() );
-        phoneNumberView.setText( mStores.get(position).getPhone() );
+//        phoneNumberView.setText( mStores.get(position).getPhone() );
 
         return view;
     }
