@@ -1,6 +1,7 @@
 package com.example.harry_000.icshop;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.app.Activity;
+import android.widget.TextView;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,6 +36,27 @@ public class MainActivity extends AppCompatActivity {
         menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
         menu.setMenu(R.layout.layout_left_menu);
     }
+
+    public void onClick(View v) {
+        // TODO Auto-generated method stub
+        switch (v.getId()) {
+            case R.id.tab_home:
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tab_search:
+                Intent intent1 = new Intent(MainActivity.this, searchActivity.class);
+                startActivity(intent1);
+                break;
+            case R.id.tab_info:
+                Intent intent2 = new Intent(MainActivity.this, info4creator.class);
+                startActivity(intent2);
+                break;
+            default:
+                break;
+        }
+    }
+
     /*all store button, imageButton1*/
     private void configureImageButton() {
         Button btn = (Button) findViewById(R.id.MainButton3);

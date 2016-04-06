@@ -12,6 +12,8 @@ import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +31,15 @@ public class searchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search);
+        SlidingMenu menu = new SlidingMenu(this);
+        menu.setMode(SlidingMenu.LEFT);
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        menu.setShadowWidthRes(R.dimen.shadow_width);
+        menu.setShadowDrawable(R.drawable.shadow);
+        menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+        menu.setFadeDegree(0.35f);
+        menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+        menu.setMenu(R.layout.layout_left_menu);
 
         final Button searchBtn=(Button) findViewById(R.id.button);
         final TextView keywordText = (TextView) this.findViewById(R.id.textView);
@@ -109,6 +120,25 @@ public class searchActivity extends AppCompatActivity {
 
         });
 
+    }
+    public void onClick(View v) {
+        // TODO Auto-generated method stub
+        switch (v.getId()) {
+            case R.id.tab_home:
+                Intent intent = new Intent(searchActivity.this, MainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tab_search:
+                Intent intent1 = new Intent(searchActivity.this, searchActivity.class);
+                startActivity(intent1);
+                break;
+            case R.id.tab_info:
+                Intent intent2 = new Intent(searchActivity.this, info4creator.class);
+                startActivity(intent2);
+                break;
+            default:
+                break;
+        }
     }
 
 
