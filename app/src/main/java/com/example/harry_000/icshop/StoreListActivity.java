@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +24,17 @@ public class StoreListActivity  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_list);
+        Intent i = getIntent();
+        String id = i.getStringExtra("storeID");
+        SlidingMenu menu = new SlidingMenu(this);
+        menu.setMode(SlidingMenu.LEFT);
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        menu.setShadowWidthRes(R.dimen.shadow_width);
+        menu.setShadowDrawable(R.drawable.shadow);
+        menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+        menu.setFadeDegree(0.35f);
+        menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+        menu.setMenu(R.layout.layout_left_menu);
 
         db = new MyDatabase(this);
         Store = db.getAllBusiness(); // you would not typically call this on the main thread
@@ -50,6 +63,25 @@ public class StoreListActivity  extends AppCompatActivity {
 
             }
         });
+    }
+    public void onClick(View v) {
+        // TODO Auto-generated method stub
+        switch (v.getId()) {
+            case R.id.tab_home:
+                Intent intent = new Intent(StoreListActivity.this, MainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tab_search:
+                Intent intent1 = new Intent(StoreListActivity.this, searchActivity.class);
+                startActivity(intent1);
+                break;
+            case R.id.tab_info:
+                Intent intent2 = new Intent(StoreListActivity.this, info4creator.class);
+                startActivity(intent2);
+                break;
+            default:
+                break;
+        }
     }
 
 

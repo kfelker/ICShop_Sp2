@@ -11,6 +11,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +23,15 @@ public class BrandListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brand_list);
+        SlidingMenu menu = new SlidingMenu(this);
+        menu.setMode(SlidingMenu.LEFT);
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        menu.setShadowWidthRes(R.dimen.shadow_width);
+        menu.setShadowDrawable(R.drawable.shadow);
+        menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+        menu.setFadeDegree(0.35f);
+        menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+        menu.setMenu(R.layout.layout_left_menu);
 
         db = new MyDatabase(this);
         Brands = db.getAllBrands(); // you would not typically call this on the main thread
@@ -51,6 +62,25 @@ public class BrandListActivity extends AppCompatActivity {
         });
     }
 
+    public void onClick(View v) {
+        // TODO Auto-generated method stub
+        switch (v.getId()) {
+            case R.id.tab_home:
+                Intent intent = new Intent(BrandListActivity.this, MainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tab_search:
+                Intent intent1 = new Intent(BrandListActivity.this, searchActivity.class);
+                startActivity(intent1);
+                break;
+            case R.id.tab_info:
+                Intent intent2 = new Intent(BrandListActivity.this, info4creator.class);
+                startActivity(intent2);
+                break;
+            default:
+                break;
+        }
+    }
 
     @Override
     protected void onDestroy() {

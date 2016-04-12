@@ -12,6 +12,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,18 +25,19 @@ import java.util.List;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-
-
-
             setContentView(R.layout.activity_brand_stores);
-
             Intent i= getIntent();
             String brandid = i.getStringExtra("brandID");
             String strBrand = i.getStringExtra("brandName");
-
-            //Toast.makeText(getApplicationContext(), id,
-            //    Toast.LENGTH_LONG).show();
-
+            SlidingMenu menu = new SlidingMenu(this);
+            menu.setMode(SlidingMenu.LEFT);
+            menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+            menu.setShadowWidthRes(R.dimen.shadow_width);
+            menu.setShadowDrawable(R.drawable.shadow);
+            menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+            menu.setFadeDegree(0.35f);
+            menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+            menu.setMenu(R.layout.layout_left_menu);
 
             db = new MyDatabase(this);
             Stores = db.getStoresByBrand(brandid); // you would not typically call this on the main thread
@@ -45,7 +48,7 @@ import java.util.List;
             listView.setAdapter(Adapter);
 
             TextView Brand = (TextView) this.findViewById(R.id.headertext);
-            Brand.setText("Stores for:" + strBrand);
+            Brand.setText(strBrand);
 
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View view,
@@ -72,7 +75,25 @@ import java.util.List;
             super.onDestroy();
             db.close();
        }
-
+        public void onClick(View v) {
+            // TODO Auto-generated method stub
+            switch (v.getId()) {
+                case R.id.tab_home:
+                    Intent intent = new Intent(BrandStoresActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.tab_search:
+                    Intent intent1 = new Intent(BrandStoresActivity.this, searchActivity.class);
+                    startActivity(intent1);
+                    break;
+                case R.id.tab_info:
+                    Intent intent2 = new Intent(BrandStoresActivity.this, info4creator.class);
+                    startActivity(intent2);
+                    break;
+                default:
+                    break;
+            }
+        }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

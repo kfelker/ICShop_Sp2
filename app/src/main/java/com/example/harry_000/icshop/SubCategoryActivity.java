@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +29,15 @@ public class SubCategoryActivity extends AppCompatActivity {
         Intent i= getIntent();
         String SubCategoryID = i.getStringExtra("ProductCategoryID");
         String SubCategoryName = i.getStringExtra("Description");
+        SlidingMenu menu = new SlidingMenu(this);
+        menu.setMode(SlidingMenu.LEFT);
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        menu.setShadowWidthRes(R.dimen.shadow_width);
+        menu.setShadowDrawable(R.drawable.shadow);
+        menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+        menu.setFadeDegree(0.35f);
+        menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+        menu.setMenu(R.layout.layout_left_menu);
 
         //Toast.makeText(getApplicationContext(), id,
         //    Toast.LENGTH_LONG).show();
@@ -75,7 +86,25 @@ public class SubCategoryActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_brand_stores, menu);
         return true;
     }
-
+    public void onClick(View v) {
+        // TODO Auto-generated method stub
+        switch (v.getId()) {
+            case R.id.tab_home:
+                Intent intent = new Intent(SubCategoryActivity.this, MainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tab_search:
+                Intent intent1 = new Intent(SubCategoryActivity.this, searchActivity.class);
+                startActivity(intent1);
+                break;
+            case R.id.tab_info:
+                Intent intent2 = new Intent(SubCategoryActivity.this, info4creator.class);
+                startActivity(intent2);
+                break;
+            default:
+                break;
+        }
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         menu.setFadeDegree(0.35f);
         configureImageButton();
         configureImageButton1();
-//        configureImageButton2();
         configureImageButton3();
         menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
         menu.setMenu(R.layout.layout_left_menu);
@@ -81,17 +80,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    /*favorite button, imageButton3*/
-//    private void configureImageButton2() {
-//        ImageButton btn = (ImageButton) findViewById(R.id.imageButton3);
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, searchActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//    }
 
     /*Category button, imageButton4*/
     private void configureImageButton3() {

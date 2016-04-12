@@ -13,6 +13,8 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+
 
 public class StoreDetailActivity extends AppCompatActivity{
     private MyDatabase db;
@@ -27,6 +29,15 @@ public class StoreDetailActivity extends AppCompatActivity{
         setContentView(R.layout.activity_store_detail);
         Intent i = getIntent();
         String id = i.getStringExtra("storeID");
+        SlidingMenu menu = new SlidingMenu(this);
+        menu.setMode(SlidingMenu.LEFT);
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        menu.setShadowWidthRes(R.dimen.shadow_width);
+        menu.setShadowDrawable(R.drawable.shadow);
+        menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+        menu.setFadeDegree(0.35f);
+        menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+        menu.setMenu(R.layout.layout_left_menu);
 
 
 
@@ -51,8 +62,6 @@ public class StoreDetailActivity extends AppCompatActivity{
             }
         });
 
-        TextView hours = (TextView) this.findViewById(R.id.textViewHours);
-        hours.setText(myStore.getHours());
 
         TextView phone = (TextView) this.findViewById(R.id.textViewPhone);
         phone.setText(myStore.getPhone());
@@ -111,6 +120,25 @@ public class StoreDetailActivity extends AppCompatActivity{
         return super.onOptionsItemSelected(item);
     }
 
+    public void onClick(View v) {
+        // TODO Auto-generated method stub
+        switch (v.getId()) {
+            case R.id.tab_home:
+                Intent intent = new Intent(StoreDetailActivity.this, MainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tab_search:
+                Intent intent1 = new Intent(StoreDetailActivity.this, searchActivity.class);
+                startActivity(intent1);
+                break;
+            case R.id.tab_info:
+                Intent intent2 = new Intent(StoreDetailActivity.this, info4creator.class);
+                startActivity(intent2);
+                break;
+            default:
+                break;
+        }
+    }
     protected void onDestroy() {
         super.onDestroy();
         db.close();
