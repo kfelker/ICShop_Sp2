@@ -140,16 +140,4 @@ public class searchActivity extends AppCompatActivity {
                 break;
         }
     }
-
-
-    // button.setOnClickListener(new View.OnClickListener() {
-
-    // @Override
-    //public void onClick(View view) {
-    //  String keyword = searchText.getText().toString();
-
-    //}
-
-
-
-}
+    }

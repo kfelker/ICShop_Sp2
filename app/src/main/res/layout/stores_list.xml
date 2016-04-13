@@ -11,19 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="Store: "
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/textView2"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Phone: "-->
-        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
-        <!--android:layout_marginTop="35dp"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentStart="true" />-->
+
 
     <TextView
         android:id="@+id/Name"
@@ -36,15 +26,6 @@
         android:layout_toRightOf="@+id/textView1"
         android:layout_toEndOf="@+id/textView1" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/Phone"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="TextView"-->
-        <!--android:layout_alignTop="@+id/Name"-->
-        <!--android:layout_toRightOf="@+id/Name"-->
-        <!--android:layout_toEndOf="@+id/Name"-->
-        <!--android:layout_marginLeft="32dp"-->
-        <!--android:layout_marginStart="32dp" />-->
+
 
 </RelativeLayout>
