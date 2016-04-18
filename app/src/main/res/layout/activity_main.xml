@@ -46,14 +46,4 @@
         android:textColor="#ffffff"
         android:clickable="true" />
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:scaleType="centerCrop"
-        android:id="@+id/imageView"
-        android:layout_above="@+id/MainButton1"
-        android:src="@drawable/homepage_pic" />
-
 </RelativeLayout>
