@@ -32,6 +32,8 @@ public class BrandListActivity extends AppCompatActivity {
         menu.setFadeDegree(0.35f);
         menu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW);
         menu.setMenu(R.layout.layout_left_menu);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setHomeButtonEnabled(false);
 
         db = new MyDatabase(this);
         Brands = db.getAllBrands(); // you would not typically call this on the main thread

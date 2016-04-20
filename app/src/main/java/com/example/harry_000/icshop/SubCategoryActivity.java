@@ -33,11 +33,12 @@ public class SubCategoryActivity extends AppCompatActivity {
         menu.setMode(SlidingMenu.RIGHT);
         menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
         menu.setShadowWidthRes(R.dimen.shadow_width);
-
         menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
         menu.setFadeDegree(0.35f);
         menu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW);
         menu.setMenu(R.layout.layout_left_menu);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setHomeButtonEnabled(false);
 
         //Toast.makeText(getApplicationContext(), id,
         //    Toast.LENGTH_LONG).show();
@@ -52,7 +53,7 @@ public class SubCategoryActivity extends AppCompatActivity {
         listView.setAdapter(Adapter);
 
         TextView SubText = (TextView) this.findViewById(R.id.headertext);
-        SubText.setText("Stores for:" + SubCategoryName);
+        SubText.setText(SubCategoryName);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,

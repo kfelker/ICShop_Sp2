@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         configureImageButton3();
         menu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW);
         menu.setMenu(R.layout.layout_left_menu);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setHomeButtonEnabled(false);
 
     }
 

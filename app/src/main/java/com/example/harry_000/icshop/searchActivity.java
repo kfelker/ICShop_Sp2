@@ -37,11 +37,12 @@ public class searchActivity extends AppCompatActivity {
         menu.setMode(SlidingMenu.RIGHT);
         menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
         menu.setShadowWidthRes(R.dimen.shadow_width);
-
         menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
         menu.setFadeDegree(0.35f);
         menu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW);
         menu.setMenu(R.layout.layout_left_menu);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setHomeButtonEnabled(false);
 
         final Button searchBtn=(Button) findViewById(R.id.button);
         final TextView keywordText = (TextView) this.findViewById(R.id.textView);
