@@ -1,5 +1,6 @@
 package com.example.harry_000.icshop;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -22,18 +23,20 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         SlidingMenu menu = new SlidingMenu(this);
-        menu.setMode(SlidingMenu.LEFT);
+        menu.setMode(SlidingMenu.RIGHT);
         menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
         menu.setShadowWidthRes(R.dimen.shadow_width);
-        menu.setShadowDrawable(R.drawable.shadow);
+
         menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
         menu.setFadeDegree(0.35f);
         configureImageButton();
         configureImageButton1();
         configureImageButton3();
-        menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+        menu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW);
         menu.setMenu(R.layout.layout_left_menu);
+
     }
 
     public void onClick(View v) {
@@ -106,16 +109,21 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case R.id.action_menu:
+                SlidingMenu menu = new SlidingMenu(this);
+                menu.setMode(SlidingMenu.RIGHT);
+                menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+                menu.setShadowWidthRes(R.dimen.shadow_width);
+                menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+                menu.setFadeDegree(0.35f);
+                menu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW);
+                menu.setMenu(R.layout.layout_left_menu);
+                menu.showMenu();
+                return true;
+            default:
+                return true;
         }
 
-        return super.onOptionsItemSelected(item);
     }
 }

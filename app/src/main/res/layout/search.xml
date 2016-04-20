@@ -82,7 +82,7 @@
         android:id="@android:id/list"
 
         android:clickable="true"
-        android:background="#ffffff"
+        android:background="#FFFFFF"
         android:drawSelectorOnTop="false"
         android:divider="#000000"
         android:dividerHeight="2dp"

@@ -30,13 +30,13 @@ public class SubCategoryActivity extends AppCompatActivity {
         String SubCategoryID = i.getStringExtra("ProductCategoryID");
         String SubCategoryName = i.getStringExtra("Description");
         SlidingMenu menu = new SlidingMenu(this);
-        menu.setMode(SlidingMenu.LEFT);
+        menu.setMode(SlidingMenu.RIGHT);
         menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
         menu.setShadowWidthRes(R.dimen.shadow_width);
-        menu.setShadowDrawable(R.drawable.shadow);
+
         menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
         menu.setFadeDegree(0.35f);
-        menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+        menu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW);
         menu.setMenu(R.layout.layout_left_menu);
 
         //Toast.makeText(getApplicationContext(), id,
@@ -80,12 +80,6 @@ public class SubCategoryActivity extends AppCompatActivity {
         db.close();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_brand_stores, menu);
-        return true;
-    }
     public void onClick(View v) {
         // TODO Auto-generated method stub
         switch (v.getId()) {
@@ -106,18 +100,30 @@ public class SubCategoryActivity extends AppCompatActivity {
         }
     }
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_menu:
+                SlidingMenu menu = new SlidingMenu(this);
+                menu.setMode(SlidingMenu.RIGHT);
+                menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+                menu.setShadowWidthRes(R.dimen.shadow_width);
+                menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+                menu.setFadeDegree(0.35f);
+                menu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW);
+                menu.setMenu(R.layout.layout_left_menu);
+                menu.showMenu();
+                return true;
+            default:
+                return true;
         }
 
-        return super.onOptionsItemSelected(item);
     }
 
 }
