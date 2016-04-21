@@ -125,6 +125,10 @@
                 android:name=".info4creator"
                 android:label="info4creator">
         </activity>
+        <activity
+                android:name=".parking"
+                android:label="parking">
+        </activity>
 
     </application>
 

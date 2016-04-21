@@ -138,9 +138,13 @@ public class StoreDetailActivity extends AppCompatActivity{
                 Intent intent1 = new Intent(StoreDetailActivity.this, searchActivity.class);
                 startActivity(intent1);
                 break;
-            case R.id.tab_info:
-                Intent intent2 = new Intent(StoreDetailActivity.this, info4creator.class);
+            case R.id.tab_parking:
+                Intent intent2 = new Intent(StoreDetailActivity.this, parking.class);
                 startActivity(intent2);
+                break;
+            case R.id.tab_info:
+                Intent intent3 = new Intent(StoreDetailActivity.this, info4creator.class);
+                startActivity(intent3);
                 break;
             default:
                 break;

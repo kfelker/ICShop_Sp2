@@ -33,6 +33,13 @@
                     android:text="Search" />
 
             <Button
+                    android:id="@+id/tab_parking"
+                    style="@style/tab_style"
+                    android:drawableLeft="@drawable/parking"
+                    android:onClick="onClick"
+                    android:text="Parking" />
+
+            <Button
                     android:id="@+id/tab_info"
                     style="@style/tab_style"
                     android:drawableLeft="@drawable/info"

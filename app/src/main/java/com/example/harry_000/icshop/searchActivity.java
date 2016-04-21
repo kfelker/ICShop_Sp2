@@ -58,7 +58,7 @@ public class searchActivity extends AppCompatActivity {
 
                    Brands = db.getBrandsBySearch(key);
                    ArrayAdapter<Brand> adapter = new ArrayAdapter<Brand>(mcontext,
-                           android.R.layout.simple_list_item_1, Brands);
+                           R.layout.search_list, Brands);
                    ListView list = (ListView) findViewById(android.R.id.list);
 
                    list.setAdapter(adapter);
@@ -91,7 +91,7 @@ public class searchActivity extends AppCompatActivity {
 
                 Stores = db.getStoresBySearch(key);
                 ArrayAdapter<Store> adapter = new ArrayAdapter<Store>(mcontext,
-                        android.R.layout.simple_list_item_1, Stores);
+                        R.layout.search_list, Stores);
                 ListView list = (ListView) findViewById(android.R.id.list);
                 list.setAdapter(adapter);
 
@@ -135,9 +135,13 @@ public class searchActivity extends AppCompatActivity {
                 Intent intent1 = new Intent(searchActivity.this, searchActivity.class);
                 startActivity(intent1);
                 break;
-            case R.id.tab_info:
-                Intent intent2 = new Intent(searchActivity.this, info4creator.class);
+            case R.id.tab_parking:
+                Intent intent2 = new Intent(searchActivity.this, parking.class);
                 startActivity(intent2);
+                break;
+            case R.id.tab_info:
+                Intent intent3 = new Intent(searchActivity.this, info4creator.class);
+                startActivity(intent3);
                 break;
             default:
                 break;

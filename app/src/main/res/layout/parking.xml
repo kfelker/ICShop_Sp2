@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:orientation="vertical" >
+            <ImageView
+                    android:id="@+id/imgaeview"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:background="#FFFFFF"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/parkingmap" />
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:text=" Parking Garages and Ramps\n
+Chauncey Swan Ramp\n
+460 E. Washington St.\n
+Court Street Transportation Center\n
+380 S. Dubuque St.\n
+Dubuque Street Garage\n
+280 S. Dubuque St.\n
+Old Capitol Town Center Garage\n
+253 S. Clinton St.\n
+Tower Place  Parking\n
+351 Iowa Ave.\n\n
+Parking Lots\n
+Burlington Street Lot\n
+142 E. Burlington St.\n
+Market Street Lot\n
+358 E. Market St.\n
+Recreation Center Lot\n
+463 E. Burlington St."/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
