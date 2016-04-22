@@ -1,6 +1,5 @@
 package com.example.harry_000.icshop;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -46,7 +45,7 @@ public class info4creator extends AppCompatActivity {
                 startActivity(intent1);
                 break;
             case R.id.tab_parking:
-                Intent intent2 = new Intent(info4creator.this, parking.class);
+                Intent intent2 = new Intent(info4creator.this, parkingActivity.class);
                 startActivity(intent2);
                 break;
             case R.id.tab_info:

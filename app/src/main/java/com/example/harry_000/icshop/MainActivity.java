@@ -1,17 +1,13 @@
 package com.example.harry_000.icshop;
 
-import android.app.ActionBar;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.app.Activity;
-import android.widget.TextView;
+
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
 public class MainActivity extends AppCompatActivity {
@@ -53,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent1);
                 break;
             case R.id.tab_parking:
-                Intent intent2 = new Intent(MainActivity.this, parking.class);
+                Intent intent2 = new Intent(MainActivity.this, parkingActivity.class);
                 startActivity(intent2);
                 break;
             case R.id.tab_info:

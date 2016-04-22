@@ -93,7 +93,7 @@ public class CategoryExpandActivity extends AppCompatActivity {
                 startActivity(intent1);
                 break;
             case R.id.tab_parking:
-                Intent intent2 = new Intent(CategoryExpandActivity.this, parking.class);
+                Intent intent2 = new Intent(CategoryExpandActivity.this, parkingActivity.class);
                 startActivity(intent2);
                 break;
             case R.id.tab_info:

@@ -35,7 +35,7 @@
             <Button
                     android:id="@+id/tab_parking"
                     style="@style/tab_style"
-                    android:drawableLeft="@drawable/parking"
+                    android:drawableLeft="@drawable/parking1"
                     android:onClick="onClick"
                     android:text="Parking" />
 

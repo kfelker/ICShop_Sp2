@@ -45,5 +45,18 @@
         android:background="#373737"
         android:textColor="#ffffff"
         android:clickable="true" />
+    <ImageView
+        android:id="@+id/imgaeview"
+        android:background="#FFFFFF"
+        android:src="@drawable/main"
+        android:layout_above="@+id/MainButton1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:maxHeight="150dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/>
+
 
 </RelativeLayout>

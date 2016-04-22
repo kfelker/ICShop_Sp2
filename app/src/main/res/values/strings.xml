@@ -14,7 +14,6 @@
     <string name="title_activity_category_expand_adapter">Category</string>
     <string name="title_activity_sub_category_list_adapter">Categoryr</string>
     <string name="title_activity_main_category_adapter">Category</string>
-
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_sub_category">Category</string>
     <string name="search_Activity">Search</string>
