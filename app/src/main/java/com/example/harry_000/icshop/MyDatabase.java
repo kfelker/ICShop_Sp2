@@ -105,8 +105,8 @@ public class MyDatabase extends SQLiteAssetHelper {
         //String sqlTables = "Business";
 
         String sqlState = "SELECT Business.ID, Business.BusinessName, Business.Phone"
-                + " FROM Business INNER JOIN (Brand INNER JOIN [Business-Brand] ON Brand.ID = [Business-Brand].BrandID) ON Business.ID = [Business-Brand].BusinessID"
-                + " WHERE (((Brand.ID)=?))";
+                + " FROM Business INNER JOIN (Brand INNER JOIN [Business-Brand] ON Brand.ID = [Business-Brand].BrandID) ON Business.ID = [Business-Brand].BusinessID "
+                + " WHERE (((Brand.ID)=?)) ORDER BY Business.BusinessName";
 
         Cursor c = db.rawQuery(sqlState, new String[]{BrandID});
 
@@ -229,7 +229,7 @@ public class MyDatabase extends SQLiteAssetHelper {
 
         String sqlState = "SELECT Brand.ID, Brand.Name "
                 + " FROM Business INNER JOIN (Brand INNER JOIN [Business-Brand] ON Brand.ID = [Business-Brand].BrandID) ON Business.ID = [Business-Brand].BusinessID "
-                + " WHERE (((Business.ID)=?)) ";
+                + " WHERE (((Business.ID)=?)) ORDER BY Brand.Name";
 
         Cursor c = db.rawQuery(sqlState, new String[]{storeID});
         c.moveToFirst();
@@ -286,7 +286,7 @@ public List<Store> getStoresBySearch(String key) {
 
     String sqlState = "SELECT  Business.ID, Business.BusinessName, 0 _id"
             + " FROM Business"
-            + " WHERE (((Business.BusinessName) LIKE '%"+key+"%'))";
+            + " WHERE (((Business.BusinessName) LIKE '%"+key+"%')) ORDER BY Business.BusinessName";
 
 
     String sqlTables = "Business";
@@ -313,7 +313,7 @@ public List<Store> getStoresBySearch(String key) {
 
         String sqlState = "SELECT 0 _id, Brand.ID, Brand.Name"
                 + " FROM Brand"
-                + " WHERE ((Brand.Name) LIKE '%"+key+"%')";
+                + " WHERE ((Brand.Name) LIKE '%"+key+"%') ORDER BY Brand.Name";
 
         String sqlTables = "Brand";
         qb.setTables(sqlTables);
@@ -344,7 +344,7 @@ public List<Store> getStoresBySearch(String key) {
 
         String sqlState = "SELECT Business.ID, Business.BusinessName, Business.Phone"
                 + " FROM Business INNER JOIN (ProductCategory INNER JOIN [Business-ProductCategory] ON ProductCategory.ID = [Business-ProductCategory].ProductCategoryID) ON Business.ID = [Business-ProductCategory].BusinessID"
-                + " WHERE (((ProductCategory.ID)=?))";
+                + " WHERE (((ProductCategory.ID)=?)) ORDER BY Business.BusinessName";
 
         Cursor c = db.rawQuery(sqlState, new String[]{SubCategoryID});
 
