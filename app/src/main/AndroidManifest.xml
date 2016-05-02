@@ -123,11 +123,11 @@
     </activity>
         <activity
                 android:name=".info4creator"
-                android:label="info4creator">
+                android:label="Info About Us">
         </activity>
         <activity
                 android:name=".parkingActivity"
-                android:label="parking">
+                android:label="Parking">
         </activity>
 
     </application>

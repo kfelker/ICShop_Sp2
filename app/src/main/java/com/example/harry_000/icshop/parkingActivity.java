@@ -27,24 +27,29 @@ public class parkingActivity extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.tab_home:
                 Intent intent = new Intent(parkingActivity.this, MainActivity.class);
-                startActivity(intent);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                this.startActivity(intent);
                 break;
             case R.id.tab_search:
                 Intent intent1 = new Intent(parkingActivity.this, searchActivity.class);
-                startActivity(intent1);
+                intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                this.startActivity(intent1);
                 break;
             case R.id.tab_parking:
                 Intent intent2 = new Intent(parkingActivity.this, parkingActivity.class);
-                startActivity(intent2);
+                intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                this.startActivity(intent2);
                 break;
             case R.id.tab_info:
                 Intent intent3 = new Intent(parkingActivity.this, info4creator.class);
-                startActivity(intent3);
+                intent3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                this.startActivity(intent3);
                 break;
             default:
                 break;
         }
     }
+
 
     private void initComponent() {
         imageView = (ImageView) findViewById(R.id.imgaeview);

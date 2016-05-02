@@ -86,24 +86,29 @@ public class SubCategoryActivity extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.tab_home:
                 Intent intent = new Intent(SubCategoryActivity.this, MainActivity.class);
-                startActivity(intent);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                this.startActivity(intent);
                 break;
             case R.id.tab_search:
                 Intent intent1 = new Intent(SubCategoryActivity.this, searchActivity.class);
-                startActivity(intent1);
+                intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                this.startActivity(intent1);
                 break;
             case R.id.tab_parking:
                 Intent intent2 = new Intent(SubCategoryActivity.this, parkingActivity.class);
-                startActivity(intent2);
+                intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                this.startActivity(intent2);
                 break;
             case R.id.tab_info:
                 Intent intent3 = new Intent(SubCategoryActivity.this, info4creator.class);
-                startActivity(intent3);
+                intent3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                this.startActivity(intent3);
                 break;
             default:
                 break;
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

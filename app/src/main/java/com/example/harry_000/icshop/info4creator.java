@@ -63,10 +63,10 @@ public class info4creator extends AppCompatActivity {
     }
     private String getHandSetInfo(){
         String handSetInfo=
-                "Phone model: " + android.os.Build.MODEL +
-                        "\nSDK version: " + android.os.Build.VERSION.SDK +
-                        "\nSystem version: " + android.os.Build.VERSION.RELEASE+
-                        "\nSoftware version: 1.1";
+                "The Iowa City Downtown District is comprised of property owners and businesses that are geographically represented in two distinct neighborhoods:  Downtown Iowa City and the Northside Marketplace.\n" +
+                        "\n" +
+                        "Established in 2012, the Iowa City Downtown District was formed as a 501(c)6 non-profit organization to serve as a champion for this geographic region.  The Downtown District provides a leadership directive that advocates for the District mission and serves as a mechanism to more efficiently implement District-wide marketing, programs, events, and projects to the benefit of all the businesses within it, the University of Iowa, community members, and the region at large (the Creative Corridor).  Since its inception, the Downtown District continues to forge an exciting and deliberate path forward towards cultural vibrancy, resiliency, and sustainability.\n";
+
         return handSetInfo;
     }
 

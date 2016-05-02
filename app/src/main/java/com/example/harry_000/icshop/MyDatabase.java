@@ -229,7 +229,7 @@ public class MyDatabase extends SQLiteAssetHelper {
 
         String sqlState = "SELECT Brand.ID, Brand.Name "
                 + " FROM Business INNER JOIN (Brand INNER JOIN [Business-Brand] ON Brand.ID = [Business-Brand].BrandID) ON Business.ID = [Business-Brand].BusinessID "
-                + " WHERE (((Business.ID)=?)) ORDER BY Brand.Name";
+                + " WHERE (((Business.ID)=?)) ORDER BY Brand.Name ";
 
         Cursor c = db.rawQuery(sqlState, new String[]{storeID});
         c.moveToFirst();
