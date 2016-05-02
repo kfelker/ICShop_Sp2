@@ -75,7 +75,7 @@ public class MyDatabase extends SQLiteAssetHelper {
         String sqlTables = "Brand";
         qb.setTables(sqlTables);
         Cursor c = qb.query(db, sqlSelect, null, null,
-                null, null, null);
+                null, null , "Name" + " ASC");
 
         c.moveToFirst();
         while (!c.isAfterLast()) {
