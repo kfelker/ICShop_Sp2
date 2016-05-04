@@ -85,6 +85,9 @@ public class StoreDetailActivity extends AppCompatActivity{
         db = new MyDatabase(this);
         strBrands = db.getStrBrandsForStore(id);
         TextView brands = (TextView) this.findViewById(R.id.textViewBrands);
+        if(strBrands.equals("")){
+            strBrands = "There are no brands for this store";
+        }
         brands.setText(strBrands);
 
         db.close();
